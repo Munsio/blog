@@ -1,0 +1,12 @@
+baseURL = "http://munsio.causticlab.codes/"
+languageCode = "en-us"
+title = "Munsio"
+theme = "beautifulhugo"
+enableRobotsTXT = true
+PygmentsCodeFences = true
+PygmentsUseClasses = true
+
+[Params]
+  Author = "Martin Treml"
+
+
