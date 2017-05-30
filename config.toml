@@ -1,7 +1,7 @@
 baseURL = "http://munsio.causticlab.codes/"
 languageCode = "en-us"
 title = "Munsio"
-theme = "hugo-steam-theme"
+theme = "munsio"
 enableRobotsTXT = true
 PygmentsCodeFences = true
 PygmentsUseClasses = true

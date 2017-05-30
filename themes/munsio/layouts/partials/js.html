@@ -1,0 +1,16 @@
+<script src="{{ "js/index.js" | absURL }}"></script>
+<script src="{{ "js/smooth-scroll.min.js" | absURL }}"></script>
+{{ range .Site.Params.customJS }}
+<link rel="stylesheet" href="{{ . | absURL }}">
+{{ end }}
+
+<script>
+    smoothScroll.init({
+        speed: 800,
+        easing: 'easeInOutCubic',
+        updateURL: false,
+        offset: 125,
+    });
+</script>
+
+{{ template "_internal/google_analytics.html" . }}
