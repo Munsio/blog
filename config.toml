@@ -10,7 +10,7 @@ PygmentsUseClasses = true
 
 	title = "Tech thoughts"
 	subtitle = "Docker, webdev and electronics"
-	copyright = ""
+	copyright = "made with <i class='fa fa-fw fa-heart'></i> mostly on <i class='fa fa-fw fa-linux'></i>"
 
 	Author = "Martin Treml"
 
