@@ -21,15 +21,9 @@
     {{ end }}
 
     <link rel="shortcut icon" href="{{ "img/favicon.ico" | absURL }}">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-
+    
     {{ "<!-- Stylesheets -->" | safeHTML }}
-    <link rel="stylesheet" href="{{ "css/screen.css" | absURL }}">
-    <link rel="stylesheet" href="{{ "css/highlight.css" | absURL }}">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/styles/default.min.css">
-    {{ range .Site.Params.customCSS }}
-    <link rel="stylesheet" href="{{ . | absURL }}">
-    {{ end }}
+    <link rel="stylesheet" href="{{ "dist/css/style.css" | absURL }}">
 
     {{ with .Site.Params.favicon }}
     <link rel="shortcut icon" type="image/x-icon" href="{{ . | absURL }}">

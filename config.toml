@@ -14,8 +14,6 @@ PygmentsUseClasses = true
 
 	Author = "Martin Treml"
 
-	# You can choose between green, orange, red and blue.
-	themeColor = "purple"
 	# Enable Google Analytics be inserting your tracking code
 	googleAnalytics = ""
 
