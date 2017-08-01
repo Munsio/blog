@@ -10,21 +10,19 @@
   "author": "Martin Treml",
   "license": "MIT",
   "scripts": {
-    "start": "npm-run-all --parallel start-gulp hugo-serve open-browser",
+    "start": "concurrently 'gulp' 'npm run hugo-serve' 'npm run open-browser'",
     "build": "hugo && gulp build",
     "hugo-serve": "hugo server --buildDrafts",
     "start-gulp": "gulp",
-    "open-browser": "xdg-open http://localhost:1313"
+    "open-browser": "open http://localhost:1313"
   },
   "devDependencies": {
-    "clean-css": "^4.1.3",
+    "clean-css": "^4.1.7",
+    "concurrently": "^3.5.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.0.0",
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.6.0",
     "rimraf": "^2.6.1"
-  },
-  "dependencies": {
-    "npm-run-all": "^4.0.2"
   }
 }
