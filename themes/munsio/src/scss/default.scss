@@ -117,6 +117,7 @@ a.archive-link,
 #site-head section {
   max-width: 800px;
   margin: 0 auto;
+  width: 90%;
 }
 
 #site-head img {
@@ -226,9 +227,9 @@ section.share p.info {
   display: inline-block;
 }
 section.author p.bio {
-  font-size: 14px;
+  font-size: 0.8em;
   margin-left: 99px;
-  line-height: 1.2em;
+  line-height: 1.4em;
 }
 blockquote {
   font-size: 1.6em;
@@ -303,14 +304,14 @@ img.userimage {
 /* === Footer === */
 footer {
   background: rgba(0, 0, 0, 0.05);
-  margin: 4em 0 0;
+  margin: 2em 0 0;
   padding: 2em 0;
   text-align: center;
 }
 footer section {
   font-weight: 300;
   margin: 0 auto;
-  max-width: 600px;
+  max-width: 800px;
   text-transform: uppercase;
   width: 90%;
 }
