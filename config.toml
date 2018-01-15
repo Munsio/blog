@@ -8,24 +8,23 @@ PygmentsUseClasses = true
 
 [params]
 
-	title = "Tech thoughts"
-	subtitle = "Docker, webdev and electronics"
+	title = "Martin Treml"
+	subtitle = "Webdev, Gopher, Docker and Electronics"
 	copyright = "made with <i class='fa fa-fw fa-heart'></i> mostly on <i class='fa fa-fw fa-linux'></i>"
 
 	Author = "Martin Treml"
 
 	# Enable Google Analytics be inserting your tracking code
-	googleAnalytics = ""
+	googleAnalytics = "UA-112493737-1"
 
 	# To provide some metadata for search engines and the about section in the footer
 	# feel free to add a few information about you and your website.
 	name = "Martin Treml"
-	bio = "I'm just a theme. That's it. If you like my design clone [me](//github.com/digitalcraftsman/hugo-steam-theme) from Github. Thanks."
+	bio = "Ahoi! I'm an Web Developer working at <a href='https://www.karriere.at' target='_blank'>karriere.at</a>. I love tinkering with golang and docker and my newest hobby is all about electronics."
 	#description = "Your description of the blog"
 	#location = "" # optional
 	twitter = "munsio" # optional
 	github = "munsio" # optional
- 	gitlab = "" # optional
 
 	# Enable a comment system
 	# You can choose between Disqus or Google Plus by setting comments
