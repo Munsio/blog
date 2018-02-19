@@ -8,6 +8,10 @@ features = []
 min_version = 0.20
 
 [author]
+  name = "Martin Treml aka Munsio"
+  homepage = "//github.com/munsio/"
+
+[[original]]
   name = "Digitalcraftsman"
   homepage = "//github.com/digitalcraftsman/"
 
