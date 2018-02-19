@@ -46,7 +46,6 @@ li,
 dt,
 dd {
   font-weight: 100;
-  line-height: 28px;
 }
 dt {
   font-weight: 400;
@@ -110,6 +109,10 @@ a.archive-link,
   width: 90%;
 }
 
+article p {
+  margin: 0;
+}
+
 #site-head {
   background-color: #f5f9fa;
 }
@@ -125,7 +128,7 @@ a.archive-link,
 }
 
 article.preview {
-  margin-bottom: 4em;
+  margin: 3em auto;
 }
 article.preview p.readmore {
   margin-top: 1em;
@@ -160,13 +163,24 @@ h1.blog-title {
   padding-top: 80px;
   margin-bottom: 5px;
 }
-h1.blog-subtitle {
+div.blog-subtitle {
   font-size: 26px;
   line-height: 32px;
   padding: 0;
   padding-bottom: 85px;
   margin-left: 1px;
 }
+.small-header {
+  font-size: 1.5em;
+  line-height: 1.75em;
+  padding:0;
+  margin-bottom: 5px;
+}
+
+.small-header a:visited {
+  color: #596364;
+}
+
 h2.blog-description {
   border-bottom: 1px solid #ecf0f1;
   border-top: 1px solid #ecf0f1;
@@ -253,6 +267,14 @@ blockquote {
   font-size: 16px;
   margin-bottom: 0.5em;
 }
+.post .post-meta {
+  margin-bottom: 2.5em;
+}
+
+.post {
+  margin-top: 5em;
+}
+
 div.authorimage {
   width: 80px;
   height: 80px;
@@ -263,22 +285,24 @@ div.authorimage {
   margin-right: 17px;
   float: left;
 }
-h1.post-title {
-  margin-top: 35px;
+h2.post-title {
+  margin: 0;
 }
-h1.post-title a,
-h1.blog-title a {
+h2.post-title a,
+h1.blog-title a, .small-header a {
   color: #151515;
   transition: color ease 0.7s;
   -webkit-transition: color ease 0.7s;
 }
-h1.post-title a {
+h2.post-title a {
   color: #946FB0;
 }
-h1.post-title a:focus,
-h1.post-title a:hover,
+h2.post-title a:focus,
+h2.post-title a:hover,
 h1.blog-title a:focus,
-h1.blog-title a:hover {
+h1.blog-title a:hover,
+.small-header a:focus,
+.small-header a:hover {
   /*color: #178b6b;*/
   text-decoration: none;
 }
@@ -700,5 +724,5 @@ a, a:visited {color: #946FB0;}
     .pagination a {color: #946FB0;}
     .gist .gist-file .gist-meta a:visited {color: #946FB0 !important;}
     a:focus, a:hover {color: #39B4BF;}
-    h1.post-title a:focus, h1.post-title a:hover, h1.blog-title a:focus, h1.blog-title a:hover {color: #39B4BF;}
+    h2.post-title a:focus, h2.post-title a:hover, h1.blog-title a:focus, h1.blog-title a:hover, .small-header a:hover, .small-header a:focus {color: #39B4BF;}
     .older-posts:hover, .newer-posts:hover {color: #946FB0;}

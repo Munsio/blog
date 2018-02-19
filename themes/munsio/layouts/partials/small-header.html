@@ -1,0 +1,7 @@
+<header id="site-head">
+	<section>
+		{{ with .Site.Params.title }}
+		<div class="small-header"><a href="{{ $.Site.BaseURL }}">{{ . | markdownify }}</a></div>
+		{{ end }}
+	</section>
+</header>

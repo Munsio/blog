@@ -22,13 +22,11 @@
 
     <link rel="shortcut icon" href="{{ "img/favicon.ico" | absURL }}">
     
-    {{ "<!-- Stylesheets -->" | safeHTML }}
-    <link rel="stylesheet" href="{{ "dist/css/style.css" | absURL }}">
-
     {{ with .Site.Params.favicon }}
     <link rel="shortcut icon" type="image/x-icon" href="{{ . | absURL }}">
     <link rel="icon" type="image/x-icon" href="{{ . | absURL }}">
     {{ end }}
 
     {{ "<!-- Stylesheet for theme color -->" | safeHTML }}
+    <link rel="stylesheet" href="/dist/css/style.css" inline>
 </head>

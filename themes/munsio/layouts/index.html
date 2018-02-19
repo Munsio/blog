@@ -1,4 +1,7 @@
 {{ define "main" }}
+
+    {{ partial "header" . }}
+
     {{ $paginator := .Paginate .Data.Pages.ByDate.Reverse }}
     {{ range $paginator.Pages }}
         {{ if not .Params.hide }}
