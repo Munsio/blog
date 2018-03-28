@@ -1,12 +1,15 @@
 ---
-date: "2018-02-19T13:12:53+02:00"
-draft: false
-title: "An small \"fast flash\" jig for the esp-8266"
-description: "An small tutorial on how to build an esp-8266 flash jig"
-tags: ["esp-8266", "tutorial"]
-categories: ["electronics"]
----
+date: 2018-02-19 13:12:53 +0200
+title: An small "fast flash" jig for the esp-8266
+description: An small tutorial on how to build an esp-8266 flash jig
+tags:
+- esp-8266
+- tutorial
+categories:
+- electronics
+draft: true
 
+---
 After receiving my esp-8266 modules and the corresponding adapter PCBs to use the chips with my breadboard the idea of soldering and desoldering it for the initial flash seems a bit tedious to me so i decided to make a "fast flash board" or "jig" to get the latest version of mongooseOS on it before using it in my projects.
 
 \[image full version\]
