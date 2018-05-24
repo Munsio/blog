@@ -17,19 +17,19 @@
     "open-browser": "open http://localhost:1313"
   },
   "devDependencies": {
-    "clean-css": "^4.1.9",
+    "clean-css": "^4.1.11",
     "concurrently": "^3.5.1",
-    "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.1.0",
-    "gulp-sass": "^3.1.0",
+    "gulp-sass": "^3.2.1",
     "gulp-sourcemaps": "^2.6.4",
     "rimraf": "^2.6.2"
   },
   "dependencies": {
     "declassify": "^2.1.0",
+    "gulp": "^3.9.1",
     "gulp-htmlmin": "^4.0.0",
     "gulp-inline-source": "^3.1.0",
     "gulp-transform": "^3.0.5",
-    "uncss": "^0.16.1"
+    "uncss": "^0.16.2"
   }
 }
