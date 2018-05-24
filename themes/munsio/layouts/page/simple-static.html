@@ -1,0 +1,15 @@
+{{ partial "head" . }}
+<body class="home-template">
+    {{ partial "navigation" . }}
+    
+    <main class="content" role="main">
+        {{ partial "small-header" . }}
+        <article class="post">
+            {{ .Content }}
+        </article>
+    </main>
+
+    {{ partial "footer" . }}
+    {{ partial "js" . }}
+</body>
+</html>

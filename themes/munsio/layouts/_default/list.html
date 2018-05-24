@@ -1,5 +1,8 @@
 {{ define "main" }}
-	{{ $paginator := .Paginate .Data.Pages }}
+
+    {{ partial "small-header" . }}
+
+	{{ $paginator := .Paginate (where .Data.Pages "Type" "post") }}
     {{ range $paginator.Pages }}
         {{ .Render "summary" }} 
     {{ end }}

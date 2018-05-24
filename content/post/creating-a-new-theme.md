@@ -8,6 +8,7 @@ title: Creating a New Theme
 weight: 10
 draft: true
 description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum similique, ipsum officia amet blanditiis provident ratione nihil ipsam dolorem repellat."
+type: "post"
 ---
 
 

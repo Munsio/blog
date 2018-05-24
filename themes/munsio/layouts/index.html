@@ -2,7 +2,7 @@
 
     {{ partial "header" . }}
 
-    {{ $paginator := .Paginate .Data.Pages.ByDate.Reverse }}
+    {{ $paginator := .Paginate (where .Data.Pages.ByDate.Reverse "Type" "post") }}
     {{ range $paginator.Pages }}
         {{ if not .Params.hide }}
            {{ .Render "summary" }}
