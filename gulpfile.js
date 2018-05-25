@@ -31,14 +31,14 @@ gulp.task('styles', ['clean:styles'], () =>
     .pipe(gulp.dest(stylesDestDirectory))
 );
 
-gulp.task(`minify:markup`, () =>
+gulp.task(`minify:markup`, ['styles'], () =>
   gulp.src(htmlPath)
     .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(inline({
-      rootpath: path.join(publicDirectory, `/`),
+      rootpath: 'static/',
       handlers: (source, context, next) => {
         if (source.type === `css` && source.fileContent && !source.content) {
-          uncss(context.html, { htmlroot: publicDirectory }, (error, css) => {
+          uncss(context.html, { htmlroot: 'static/' }, (error, css) => {
             if (error) throw error;
             // eslint-disable-next-line no-param-reassign
             source.content = `<style>${new CleanCSS({ level: 2 }).minify(css).styles}</style>`;

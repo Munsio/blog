@@ -2,7 +2,6 @@
 title: "Imprint"
 date: 2018-05-24T15:32:42+02:00
 type: "page"
-draft: true
 layout: "simple-static"
 ---
 
