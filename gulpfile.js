@@ -16,7 +16,15 @@ const publicDirectory = 'public';
 const stylesDestDirectory = 'static/dist/css';
 const stylesSrcDirectory = 'themes/munsio/src/scss/**/*.scss';
 const htmlPath = path.join(publicDirectory, '**/*.html');
-
+const declassifyOptions = {
+  attrs: [`class`],
+  ignore: [
+    `codepen`,
+    /fa.+/,
+    /language-.+/, 
+    (process.env.NODE_ENV === `test` ? /qa-.+/ : undefined)
+  ],
+}
 
 gulp.task('watch', () => {
   gulp.watch(stylesSrcDirectory, ['styles']);
@@ -49,10 +57,7 @@ gulp.task(`minify:markup`, ['styles'], () =>
         }
       },
     }))
-    .pipe(transform(`utf8`, content => declassify.process(content, {
-      attrs: [`class`],
-      ignore: [`codepen`, /language-.+/, (process.env.NODE_ENV === `test` ? /qa-.+/ : undefined)],
-    })))
+    .pipe(transform(`utf8`, content => declassify.process(content, declassifyOptions)))
     .pipe(gulp.dest(publicDirectory)),
 );
 
