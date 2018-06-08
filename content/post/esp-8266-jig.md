@@ -7,7 +7,6 @@ tags:
 - tutorial
 categories:
 - electronics
-draft: true
 
 ---
 After receiving my esp-8266 modules and the corresponding adapter PCBs to use the chips with my breadboard the idea of soldering and desoldering it for the initial flash seems a bit tedious to me so i decided to make a "fast flash board" or "jig" to get the latest version of mongooseOS on it before using it in my projects.
