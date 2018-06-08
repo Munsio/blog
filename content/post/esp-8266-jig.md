@@ -12,7 +12,7 @@ draft: true
 ---
 After receiving my esp-8266 modules and the corresponding adapter PCBs to use the chips with my breadboard the idea of soldering and desoldering it for the initial flash seems a bit tedious to me so i decided to make a "fast flash board" or "jig" to get the latest version of mongooseOS on it before using it in my projects.
 
-\[image full version\]
+![](/uploads/2018/06/08/esp8266-jig-finished-jig.jpg)
 
 In the end I'm very happy with the outcome and after a few initial problems (with mongooseOS) the reliability is better than expected. If you want to build it by yourself it is even for a newcomer to electronics like me an easy task to solder it all together.
 
@@ -30,22 +30,16 @@ In the end I'm very happy with the outcome and after a few initial problems (wit
 
 We start by drilling holes in the inner contacts of the adapter PCB, keep in mind that those holes should be in line, because we need to put male pin headers through it.
 
-\[image pcb with holes\]
+![](/uploads/2018/06/08/esp8266-jig-drilling-holes.jpg)
 
 The next step is to modify some of the pin headers by moving the plastic down to the end.
 
-\[image pin headers\]
-
 With that we are now able to solder those pin headers to the PCB and use the female pin header on top of it. These are the parts where the ESP gets clamped into.
 
-\[image female pin header\]
+![](/uploads/2018/06/08/esp8266-jig-pin-headers-female.jpg)
 
 The last step is to solder the pin headers shipped with the PCB to the outside facing down.
 
-\[image finished jig\]
+![](/uploads/2018/06/08/esp8266-jig-outer-pin-headers.jpg)
 
 In the end we use the arduino IDE and the blink example to verify that the chip is able to flash. Keep in mind that the pin of the connected LED could change. It may vary due to a different layout at the board you are using. It also may change if you are using an other esp-8266 board.
-
-\[code - arduino\]
-
-\[video - code upload and blinking LED\]
