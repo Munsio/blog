@@ -10,15 +10,12 @@ const transform = require('gulp-transform');
 const inline = require('gulp-inline-source');
 const sourcemaps = require('gulp-sourcemaps');
 const uncss = require('uncss');
-const ttf2woff2 = require('gulp-ttf2woff2');
 
 
 const publicDirectory = 'public';
 const srcDirectory = 'themes/munsio/src/';
 const stylesDestDirectory = 'static/dist/css';
 const stylesSrcDirectory = path.join(srcDirectory, 'scss/**/*.scss');
-const fontSrcDirectory = path.join(srcDirectory, 'fonts/**/*.ttf');
-const fontDestDirectory = path.join(publicDirectory, 'fonts');
 const htmlPath = path.join(publicDirectory, '**/*.html');
 const declassifyOptions = {
   attrs: [`class`],
@@ -34,7 +31,7 @@ gulp.task('watch', () => {
   gulp.watch(stylesSrcDirectory, ['styles']);
 });
 
-gulp.task('styles', ['clean:styles', 'fonts'], () =>
+gulp.task('styles', ['clean:styles'], () =>
   gulp.src(stylesSrcDirectory)
     .pipe(sourcemaps.init())
       .pipe(sass().on('error', sass.logError))
@@ -63,12 +60,6 @@ gulp.task(`minify:markup`, ['styles'], () =>
     }))
     .pipe(transform(`utf8`, content => declassify.process(content, declassifyOptions)))
     .pipe(gulp.dest(publicDirectory)),
-);
-
-gulp.task('fonts', () => 
-  gulp.src(fontSrcDirectory)
-  .pipe(ttf2woff2())
-  .pipe(gulp.dest(fontDestDirectory)),
 );
 
 gulp.task('clean:styles', () => rimraf.sync(stylesDestDirectory));
