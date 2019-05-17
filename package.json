@@ -11,7 +11,7 @@
   "license": "MIT",
   "scripts": {
     "start": "concurrently 'gulp' 'npm run hugo-serve' 'npm run open-browser'",
-    "build": "hugo && gulp build",
+    "build": "gulp build && hugo",
     "hugo-serve": "hugo server --buildDrafts",
     "start-gulp": "gulp",
     "open-browser": "open http://localhost:1313"
