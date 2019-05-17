@@ -1,3 +1,9 @@
 @import './components/_highlight';
 @import './components/_fonts';
 @import './default';
+
+
+section.post-content img  {
+    margin: 20px 0px;
+    box-shadow: 0px 0px 5px gray;
+}
