@@ -27,6 +27,6 @@
     <link rel="icon" type="image/x-icon" href="{{ . | absURL }}">
     {{ end }}
 
-    {{ "<!-- Stylesheet for theme color -->" | safeHTML }}
-    <link rel="stylesheet" href="css/style.css" inline>
+    {{ $style := resources.Get "css/style.css" | resources.Minify | resources.Fingerprint }}
+    <link rel="stylesheet" href="{{ $style.Permalink }}">
 </head>

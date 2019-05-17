@@ -14,7 +14,7 @@ const uncss = require('uncss');
 
 const publicDirectory = 'public';
 const srcDirectory = 'themes/munsio/src/';
-const stylesDestDirectory = 'static/css';
+const stylesDestDirectory = path.join(srcDirectory, '../assets/css');
 const stylesSrcDirectory = path.join(srcDirectory, 'scss/**/*.scss');
 const htmlPath = path.join(publicDirectory, '**/*.html');
 const declassifyOptions = {
