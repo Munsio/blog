@@ -1,4 +1,4 @@
-baseURL = "https://martin.treml.codes/"
+baseURL = "https://martin.treml.dev/"
 languageCode = "en-us"
 theme = "munsio"
 enableRobotsTXT = true
