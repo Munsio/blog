@@ -13,12 +13,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 
     {{ "<!-- RSS autodiscovery -->" | safeHTML }}
-    {{ if .OutputFormats.Get "RSS"  }}
-    <link href="{{ .RelPermalink }}" rel="alternate" type="application/rss+xml"
-    title="{{ .Site.Title }}" />
-    <link href="{{ .RelPermalink }}" rel="feed" type="application/rss+xml"
-    title="{{ .Site.Title }}" />
-    {{ end }}
+    {{ with .OutputFormats.Get "rss" -}}
+        {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+    {{ end -}}
 
     <link rel="shortcut icon" href="{{ "img/favicon.ico" | absURL }}">
     

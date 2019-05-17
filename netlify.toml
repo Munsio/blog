@@ -28,3 +28,15 @@ HUGO_VERSION = "0.55.5"
 
 [context.next.environment]
 HUGO_ENABLEGITINFO = "true"
+
+[[redirects]]
+  from = "https://treml.dev/*"
+  to = "https://martin.treml.dev/:splat"
+
+[[redirects]]
+  from = "https://treml.codes/*"
+  to = "https://martin.treml.dev/:splat"
+
+[[redirects]]
+  from = "https://martin.treml.codes/*"
+  to = "https://martin.treml.dev/:splat"

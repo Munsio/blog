@@ -1,7 +1,0 @@
-# Redirect domain aliases to primary domain
-https://treml.dev/* https://martin.treml.dev/:splat 301!
-https://treml.codes/* https://martin.treml.dev/:splat 301!
-https://martin.treml.codes/* https://martin.treml.dev/:splat 301!
-
-# Optional: Redirect default Netlify subdomain to primary domain
-https://affectionate-ritchie-37b93b.netlify.com/* https://martin.treml.dev/:splat 301!
