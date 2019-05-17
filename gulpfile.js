@@ -3,7 +3,7 @@ const CleanCSS = require('clean-css');
 const declassify = require('declassify');
 const gulp = require('gulp');
 const sass = require('gulp-sass');
-const rimraf = require('rimraf');
+const del = require('del');
 const path = require('path');
 const htmlmin = require('gulp-htmlmin');
 const transform = require('gulp-transform');
@@ -27,43 +27,46 @@ const declassifyOptions = {
   ],
 }
 
-gulp.task('watch', () => {
-  gulp.watch(stylesSrcDirectory, ['styles']);
-});
+gulp.task('clean:styles', function () { return del(stylesDestDirectory) });
 
-gulp.task('styles', ['clean:styles'], () =>
-  gulp.src(stylesSrcDirectory)
+gulp.task('styles', function() {
+  return gulp.src(stylesSrcDirectory)
     .pipe(sourcemaps.init())
       .pipe(sass().on('error', sass.logError))
       .pipe(autoprefixer())
     .pipe(sourcemaps.write({ sourceRoot: '/scss' }))
     .pipe(gulp.dest(stylesDestDirectory))
-);
+});
 
-gulp.task(`minify:markup`, ['styles'], () =>
-  gulp.src(htmlPath)
-    .pipe(htmlmin({ collapseWhitespace: true }))
-    .pipe(inline({
-      rootpath: 'static/',
-      handlers: (source, context, next) => {
-        if (source.type === `css` && source.fileContent && !source.content) {
-          uncss(context.html, { htmlroot: 'static/' }, (error, css) => {
-            if (error) throw error;
-            // eslint-disable-next-line no-param-reassign
-            source.content = `<style>${new CleanCSS({ level: 2 }).minify(css).styles}</style>`;
-            next();
-          });
-        } else {
-          next();
-        }
-      },
-    }))
-    .pipe(transform(`utf8`, content => declassify.process(content, declassifyOptions)))
-    .pipe(gulp.dest(publicDirectory)),
-);
+// gulp.task(`minify:markup`, function() {
+//   return gulp.src(htmlPath)
+//     .pipe(htmlmin({ collapseWhitespace: true }))
+//     .pipe(inline({
+//       rootpath: 'static/',
+//       handlers: (source, context, next) => {
+//         if (source.type === `css` && source.fileContent && !source.content) {
+//           uncss(context.html, { htmlroot: 'static/' }, (error, css) => {
+//             if (error) throw error;
+//             // eslint-disable-next-line no-param-reassign
+//             source.content = `<style>${new CleanCSS({ level: 2 }).minify(css).styles}</style>`;
+//             next();
+//           });
+//         } else {
+//           next();
+//         }
+//       },
+//     }))
+//     .pipe(transform(`utf8`, content => declassify.process(content, declassifyOptions)))
+//     .pipe(gulp.dest(publicDirectory))
+// });
 
-gulp.task('clean:styles', () => rimraf.sync(stylesDestDirectory));
+const compileStyles = gulp.series('clean:styles', 'styles');
+const build = gulp.series('clean:styles', 'styles');
 
-gulp.task('build', ['styles', 'minify:markup']);
+module.exports = { build: build }
 
-gulp.task('default', ['watch', 'build']);
+gulp.task('watch', () => {
+    gulp.watch(stylesSrcDirectory, compileStyles);
+  });
+
+gulp.task('default', gulp.parallel('watch', build));

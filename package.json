@@ -19,6 +19,7 @@
   "devDependencies": {
     "clean-css": "^4.2.1",
     "concurrently": "^4.0.0",
+    "del": "^4.1.1",
     "gulp-autoprefixer": "^6.0.0",
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.4",
