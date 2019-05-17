@@ -13,7 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 
     {{ "<!-- RSS autodiscovery -->" | safeHTML }}
-    {{ if .RelPermalink }}
+    {{ if .OutputFormats.Get "RSS"  }}
     <link href="{{ .RelPermalink }}" rel="alternate" type="application/rss+xml"
     title="{{ .Site.Title }}" />
     <link href="{{ .RelPermalink }}" rel="feed" type="application/rss+xml"
@@ -27,6 +27,10 @@
     <link rel="icon" type="image/x-icon" href="{{ . | absURL }}">
     {{ end }}
 
-    {{ $style := resources.Get "css/style.css" | resources.Minify | resources.Fingerprint }}
+
+    {{ $options := (dict "targetPath" "css/style.css" "outputStyle" "compressed") }}
+    {{ $style := resources.Get "scss/style.scss" | resources.ToCSS $options }}
+
+    {{ $style = $style | resources.Minify | resources.Fingerprint }}
     <link rel="stylesheet" href="{{ $style.Permalink }}">
 </head>

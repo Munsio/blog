@@ -29,5 +29,4 @@ dist
 static/css
 node_modules
 public
-themes/**/assets
 resources
