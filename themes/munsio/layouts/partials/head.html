@@ -27,10 +27,9 @@
     <link rel="icon" type="image/x-icon" href="{{ . | absURL }}">
     {{ end }}
 
-
-    {{ $options := (dict "targetPath" "css/style.css" "outputStyle" "compressed") }}
-    {{ $style := resources.Get "scss/style.scss" | resources.ToCSS $options }}
-
-    {{ $style = $style | resources.Minify | resources.Fingerprint }}
-    <link rel="stylesheet" href="{{ $style.Permalink }}">
+    <style type="text/css" nonce="NpFIVoQo4aQMx2YS">
+        {{ $options := (dict "targetPath" "css/style.css" "outputStyle" "compressed") }}
+        {{ $style := resources.Get "scss/style.scss" | resources.ToCSS $options | minify | fingerprint }}
+        {{ $style.Content | safeCSS }}
+    </style>
 </head>
