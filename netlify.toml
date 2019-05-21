@@ -32,11 +32,14 @@ HUGO_ENABLEGITINFO = "true"
 [[redirects]]
   from = "https://treml.dev/*"
   to = "https://martin.treml.dev/:splat"
+  force = true
 
 [[redirects]]
   from = "https://treml.codes/*"
   to = "https://martin.treml.dev/:splat"
+  force = true
 
 [[redirects]]
   from = "https://martin.treml.codes/*"
   to = "https://martin.treml.dev/:splat"
+  force = true
