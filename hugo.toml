@@ -1,0 +1,5 @@
+baseURL = 'https://martin.treml.dev/'
+languageCode = 'en-us'
+theme = 'writeonlyhugo-theme'
+
+title = 'Martin Treml - Go Software Engineer'
