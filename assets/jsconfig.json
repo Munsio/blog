@@ -3,8 +3,8 @@
   "baseUrl": ".",
   "paths": {
    "*": [
-    "../themes/writeonlyhugo-theme/_vendor/github.com/twbs/bootstrap/js/*",
-    "../themes/writeonlyhugo-theme/assets/*"
+    "../../../../.cache/hugo_cache/modules/filecache/modules/pkg/mod/gitlab.com/writeonlyhugo/writeonlyhugo-theme@v0.0.0-20240502104725-cc4014d1c855/_vendor/github.com/twbs/bootstrap/js/*",
+    "../../../../.cache/hugo_cache/modules/filecache/modules/pkg/mod/gitlab.com/writeonlyhugo/writeonlyhugo-theme@v0.0.0-20240502104725-cc4014d1c855/assets/*"
    ]
   }
  }
