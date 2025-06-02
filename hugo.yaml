@@ -13,9 +13,12 @@ params:
     avatar: "avatar.png"
     name: "Martin Treml"
     description: "Go Software Engineer, NixOS enthusiast and passionated Homelabber"
+  dateFormat: "2006.01.02"
   socialIcons:
     - name: "github"
       url: "https://github.com/Munsio"
+    - name: "linkedin"
+      url: "https://linkedin.com/in/treml-martin"
 
 languages:
   "en-us":
