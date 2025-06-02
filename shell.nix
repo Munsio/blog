@@ -1,6 +1,7 @@
 {pkgs ? import <nixpkgs> {}}:
 pkgs.mkShell {
-  packages = [
-    pkgs.hugo
+  packages = with pkgs; [
+    hugo
+    go
   ];
 }

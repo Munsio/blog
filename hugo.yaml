@@ -1,28 +1,44 @@
 baseURL: "https://martin.treml.dev/"
 languageCode: "en-us"
+defaultContentLanguage: "en-us"
 
 title: "Martin Treml - Go Software Engineer"
 
-params:
-  description: "Go Software Engineer, NixOS enthusiast"
-  authors: "Martin Treml"
-  socials:
-    - icon: "github"
-      url: "https://github.com/Munsio"
-      weight: 1
 
-menus:
-  main:
-    - name: "Imprint"
-      url: "/page/imprint"
-      weight: 1
+enableEmoji: true
+
+params:
+  toc: true
+  author:
+    avatar: "avatar.png"
+    name: "Martin Treml"
+    description: "Go Software Engineer, NixOS enthusiast and passionated Homelabber"
+  socialIcons:
+    - name: "github"
+      url: "https://github.com/Munsio"
+
+languages:
+  "en-us":
+    contentDir: "content/en"
+    menu:
+      main:
+        - pageRef: "imprint"
+          name: "Imprint"
+          url: "/imprint/"
+          weight: 30
 
 markup:
+  highlight:
+    noClasses: false
   goldmark:
     renderer:
-      hardWraps: true
+      unsafe: true
+  tableOfContents:
+    startLevel: 2
+    endLevel: 4
+    ordered: false
 
 module:
   imports:
     - path: github.com/hugo-mods/icons
-    - path: gitlab.com/writeonlyhugo/writeonlyhugo-theme
+    - path: github.com/hugo-sid/hugo-blog-awesome

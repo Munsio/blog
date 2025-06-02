@@ -2,5 +2,5 @@ github.com/FortAwesome/Font-Awesome v0.0.0-20210316185733-d79d85c3fad8 h1:3h1ZlZ
 github.com/FortAwesome/Font-Awesome v0.0.0-20210316185733-d79d85c3fad8/go.mod h1:IUgezN/MFpCDIlFezw3L8j83oeiIuYoj28Miwr/KUYo=
 github.com/hugo-mods/icons v0.0.0-20220508080705-d938a1900b1c h1:BHTy85KaX2uQnC+1i5NRVAxiJNOwpIwQXlY/zpLD6zA=
 github.com/hugo-mods/icons v0.0.0-20220508080705-d938a1900b1c/go.mod h1:sPodUyqumOYz75PKIwmqOYZXLIcLAujn7V9+1Hk4VW8=
-gitlab.com/writeonlyhugo/writeonlyhugo-theme v0.0.0-20240502104725-cc4014d1c855 h1:0jE9tIrKGYuI5HOqv0ByI7Z3ZKBjxEt64F76Vse+fD8=
-gitlab.com/writeonlyhugo/writeonlyhugo-theme v0.0.0-20240502104725-cc4014d1c855/go.mod h1:TQafGo0IVh/tNaoi9zpPgZea3XHAahKIes5MjdMrhsU=
+github.com/hugo-sid/hugo-blog-awesome v1.20.0 h1:4WkPBeAuKdpDNzB4DSz31hG7W4qI9+V/1wrYjSMxRl4=
+github.com/hugo-sid/hugo-blog-awesome v1.20.0/go.mod h1:3XVERF66wgQpTsruOajS5Swr+uvyTzov1acafNaqm1E=
