@@ -2,7 +2,7 @@
 {{ $caption := .Get "caption"}}
 {{ with $.Page.Resources.GetMatch (.Get "name") }}
 <figure class="content-image">
-    <a href="{{.RelPermalink}}">
+    <a href="{{.RelPermalink}}" target="_blank">
         <img srcset="
           {{ (.Resize " 2000x webp q90").RelPermalink }} 2x, {{ (.Resize "1000x webp q90" ).RelPermalink }} 1x, {{
             (.Resize "2000x png" ).RelPermalink }} 2x" src="{{ (.Resize " 400x jpg q60").RelPermalink }}"
