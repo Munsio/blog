@@ -1,0 +1,31 @@
+{{- $alt := .PlainText -}}
+{{- $img := "" -}}
+{{- with .Page.Resources.Get .Destination -}}
+  {{- if in (slice "jpeg" "png" "webp") .MediaType.SubType -}}
+    {{- $img = . -}}
+  {{- end -}}
+{{- end -}}
+{{- if $img -}}
+  {{- $w1 := cond (gt $img.Width 1000) 1000 $img.Width -}}
+  {{- $w2 := cond (gt $img.Width 2000) 2000 $img.Width -}}
+  {{- $small := $img.Resize (printf "%dx webp q90" $w1) -}}
+  {{- $large := $img.Resize (printf "%dx webp q90" $w2) -}}
+  {{- if .IsBlock -}}
+<figure class="content-image">
+  <a href="{{ $img.RelPermalink }}" target="_blank">
+    <img src="{{ $small.RelPermalink }}" srcset="{{ $small.RelPermalink }} 1x, {{ $large.RelPermalink }} 2x"
+      width="{{ $small.Width }}" height="{{ $small.Height }}" alt="{{ $alt }}" loading="lazy">
+  </a>
+  {{- with .Title }}
+  <figcaption><p>{{ . }}</p></figcaption>
+  {{- end }}
+</figure>
+  {{- else -}}
+<img src="{{ $small.RelPermalink }}" srcset="{{ $small.RelPermalink }} 1x, {{ $large.RelPermalink }} 2x"
+  alt="{{ $alt }}" {{- with .Title }} title="{{ . }}"{{ end }} loading="lazy">
+  {{- end -}}
+{{- else -}}
+  {{- $src := .Destination -}}
+  {{- with .Page.Resources.Get .Destination }}{{ $src = .RelPermalink }}{{ end -}}
+<img src="{{ $src | safeURL }}" alt="{{ $alt }}" {{- with .Title }} title="{{ . }}"{{ end }} loading="lazy">
+{{- end -}}
